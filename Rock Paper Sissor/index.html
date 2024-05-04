@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rock | Paper | Scissor</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <style>
+      #start-game-btn {
+        margin: 20px;
+      }
+      .display img {
+        border: 2px solid black;
+        border-radius: 30px;
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+        padding: 20px;
+      }
+      .action-btn {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .action-btn button:hover {
+        background-color: rgb(203, 119, 119);
+      }
+      .game-moves {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .name {
+        text-align: center;
+      }
+    </style> -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- <div><button id="start-game-btn">Start Game!</button></div> -->
+    <!-- <div id="display-user" class="display"></div> -->
+    <div class="flex justify-center">
+      <div>Winner :</div>
+      <div id="display-winner"></div>
+    </div>
+
+    <div class="flex justify-evenly">
+      <div class="border-spacing-2">
+        <div id="computer-winner">Computer</div>
+        <div id="display-computer" class="display"></div>
+      </div>
+      <div class="name">
+        <div id="player-winner">Player</div>
+        <div id="display-player" class="display"></div>
+      </div>
+    </div>
+    <!-- <div class="action-btn"> -->
+    <div class="flex justify-center gap-7">
+      <button class="border-black hover:bg-red-400">ROCK</button>
+      <button class="border-black hover:bg-red-400">PAPER</button>
+      <button class="border-black hover:bg-red-400">SCISSOR</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Paper Scissor</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/script.js"></script>
+  </head>
+  <body class="bg-white dark:bg-black text-black dark:text-white">
+    <div class="overflow-hidden">
+      <div class="flex justify-around">
+        <h1 class="text-3xl sm:text-7xl font-bold">Stone Paper Scissor</h1>
+        <button id="toggle-dark" class="font-semibold">Dark Mode</button>
+      </div>
+      <div
+        class="p-14 flex-row justify-center sm:flex sm:justify-evenly sm:p-10"
+      >
+        <div>
+          <div class="text-3xl p-2 text-center sm:text-4xl">Computer</div>
+          <div
+            id="computer-window"
+            class="w-60 h-60 border-8 border-sky-500 sm:w-96 sm:h-96"
+          ></div>
+        </div>
+        <div
+          id="display-winner"
+          class="text-3xl text-green-600 text-center"
+        ></div>
+        <div>
+          <div class="text-3xl p-2 text-center sm:text-4xl">Player</div>
+          <div
+            id="player-window"
+            class="w-60 h-60 border-8 border-sky-500 sm:w-96 sm:h-96"
+          ></div>
+        </div>
+      </div>
+      <div class="flex justify-center gap-9">
+        <button
+          id="stone-btn"
+          class="border-solid border-2 rounded text-2xl bg-gray-500 sm:text-4xl p-3"
+        >
+          Stone
+        </button>
+        <button
+          id="paper-btn"
+          class="border-solid border-2 rounded text-2xl sm:text-4xl p-3"
+        >
+          Paper
+        </button>
+        <button
+          id="scissor-btn"
+          class="border-solid border-2 rounded text-2xl bg-yellow-400 sm:text-4xl p-3"
+        >
+          Scissor
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

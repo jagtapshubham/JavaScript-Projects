@@ -1,0 +1,2 @@
+Resource to get key code of any keyboard key
+https://www.toptal.com/developers/keycode

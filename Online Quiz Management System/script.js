@@ -16,7 +16,7 @@ aboutLink.addEventListener("click", (event) => {
       contentArea.innerHTML = data; // Inject the loaded HTML content into the content-area
     })
     .catch((error) => {
-      console.error("Ther was a problem with the fetch operation:", error);
+      console.error("There was a problem with the fetch operation:", error);
     });
 });
 
@@ -79,5 +79,3 @@ cancelLogin.addEventListener("click", (event) => {
   event.preventDefault();
   modalContainerLogin.classList.remove("show");
 });
-
-// Quiz Page Script

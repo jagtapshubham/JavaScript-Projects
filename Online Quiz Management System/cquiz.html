@@ -4,6 +4,206 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>C Quiz</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(to right, #06b6d4, #3b82f6);
+      }
+      .quiz-page-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        color: black;
+        background-color: #2a2a3f;
+        color: white;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+      }
+      .question-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        gap: 20px;
+        box-shadow: 0 12px 10px rgba(0, 0, 0, 0.9);
+        background-color: white;
+      }
+      #quiz-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin: 40px 0;
+      }
+      .option {
+        align-items: center;
+      }
+      button {
+        padding: 9px 20px;
+        border-radius: 5px;
+        box-shadow: 0 12px 10px rgba(0, 0, 0, 0.3);
+        font-size: medium;
+      }
+      button:hover {
+        background-color: #4ccb1a;
+        box-shadow: 0 12px 10px rgba(0, 0, 0, 0.9);
+        color: white;
+      }
+    </style>
+    <script defer>
+      window.onload = function () {
+        let totalTime = 5;
+        var timerElement = document.getElementById("display-timer");
+
+        let countdown = setInterval(function () {
+          let minutes = Math.floor(totalTime / 60);
+          let seconds = totalTime % 60;
+
+          var formattedTime =
+            (minutes < 10 ? "0" : "") +
+            minutes +
+            ":" +
+            (seconds < 10 ? "0" : "") +
+            seconds;
+
+          timerElement.textContent = "Time Left: " + formattedTime;
+          totalTime--;
+          if (totalTime < -1) {
+            clearInterval(countdown);
+            alert("Time is up!");
+            window.location.href = "quiz.html";
+          }
+        }, 1000);
+        const submitQuiz = document.getElementById("submit-quiz");
+        submitQuiz.addEventListener("click", () => {
+          alert("Submitted Quiz Successfully, Check Result.");
+          window.location.href = "quiz.html";
+        });
+      };
+    </script>
   </head>
-  <body></body>
+  <body>
+    <nav class="quiz-page-nav">
+      <h1>Quizz Systems</h1>
+      <div>C Quiz</div>
+      <span id="display-timer">Time Left:00:00</span>
+    </nav>
+    <form id="quiz-form">
+      <div class="question-container">
+        <h3>
+          1. Which of the following function is more appropriate for reading in
+          a multi-word string?
+        </h3>
+        <div class="option">
+          <input type="radio" name="answer1" value="A" id="optionA" />
+          <label for="optionA">scanf()</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer1" id="optionB" />
+          <label for="optionB">gets()</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer1" id="optionC" />
+          <label for="optionC">printf()</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer1" id="optionD" />
+          <label for="optionD">puts()</label>
+        </div>
+      </div>
+      <div class="question-container">
+        <h3>
+          2. If the two strings are identical, then strcmp() function returns
+        </h3>
+        <div class="option">
+          <input type="radio" name="answer2" value="A" id="optionA" />
+          <label for="optionA">1</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer2" id="optionB" />
+          <label for="optionB">0</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer2" id="optionC" />
+          <label for="optionC">-1</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer2" id="optionD" />
+          <label for="optionD">true</label>
+        </div>
+      </div>
+      <div class="question-container">
+        <h3>3. Array passed as an argument to a function is interpreted as</h3>
+        <div class="option">
+          <input type="radio" name="answer3" value="A" id="optionA" />
+          <label for="optionA">Address of the array</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer3" id="optionB" />
+          <label for="optionB">Values of the first elements of the array</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer3" id="optionC" />
+          <label for="optionC"
+            >Address of the first elements of the array</label
+          >
+        </div>
+        <div class="option">
+          <input type="radio" name="answer34" id="optionD" />
+          <label for="optionD">Number of element of the array</label>
+        </div>
+      </div>
+      <div class="question-container">
+        <h3>4. Size of the array need to be specified, when</h3>
+        <div class="option">
+          <input type="radio" name="answer4" value="A" id="optionA" />
+          <label for="optionA">Initialization is a part of definition</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer4" id="optionB" />
+          <label for="optionB">It is a declaration</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer4" id="optionC" />
+          <label for="optionC">It is a formal parameter</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer4" id="optionD" />
+          <label for="optionD">All of these</label>
+        </div>
+      </div>
+      <div class="question-container">
+        <h3>5. Which of the following is not a correct variable type?</h3>
+        <div class="option">
+          <input type="radio" name="answer5" value="A" id="optionA" />
+          <label for="optionA">float</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer5" id="optionB" />
+          <label for="optionB">real</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer5" id="optionC" />
+          <label for="optionC">int</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="answer5" id="optionD" />
+          <label for="optionD">double</label>
+        </div>
+      </div>
+      <button type="button" id="submit-quiz">Submit</button>
+    </form>
+  </body>
 </html>

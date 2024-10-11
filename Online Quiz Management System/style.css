@@ -10,7 +10,7 @@ body {
 #navigation-bar {
   padding: 20px;
   z-index: -1;
-  background-color: rgb(22, 123, 123);
+  background-color: #2a2a3f;
 }
 #navigation-bar ul {
   display: flex;
@@ -18,6 +18,9 @@ body {
   gap: 30px;
   list-style: none;
   font-size: 25px;
+}
+#navigation-bar a:hover {
+  color: #4ccb1a;
 }
 
 a {
@@ -32,7 +35,7 @@ a {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  background-color: rgb(3, 81, 81);
+  background: linear-gradient(to right, #06b6d4, #3b82f6);
   font-size: 60px;
   color: rgb(252, 252, 0);
 }
@@ -41,12 +44,14 @@ a {
   border: 0;
   border-radius: 20px;
   box-shadow: 5px 10px rgb(4, 3, 3);
-  padding: 20px;
+  padding: 15px 28px;
   margin: 80px 10px;
   font-size: 20px;
 }
 .button:hover {
-  background-color: greenyellow;
+  background-color: #4ccb1a;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.9);
+  color: white;
 }
 
 .modal-container {
@@ -69,7 +74,7 @@ a {
   opacity: 1;
 }
 .modal {
-  background-color: aliceblue;
+  background: linear-gradient(to right, #06b6d4, #3b82f6);
   max-width: 100%;
   width: 600px;
   border-radius: 10px;
@@ -118,8 +123,23 @@ input[type="password"] {
 
 .button-form {
   font-size: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
-  box-shadow: 1px 3px rgb(4, 3, 3);
-  padding: 10px;
+  /* border: 2px solid black; */
+  /* border-radius: 10px;
+  box-shadow: 1px 3px rgb(4, 3, 3); */
+  /* padding: 10px; */
+  padding: 9px 20px;
+  border-radius: 5px;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.3);
+}
+#signup-btn:hover,
+#login-btn:hover {
+  background-color: #4ccb1a;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.9);
+  color: white;
+}
+#cancel-signup:hover,
+#cancel-login:hover {
+  background-color: #db1e1e;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.9);
+  color: white;
 }

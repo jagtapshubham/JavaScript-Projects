@@ -2,6 +2,24 @@
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/Fonts/Poppins") format("truetype");
+}
+@font-face {
+  font-family: "Londrina";
+  src: url("/Fonts/Londrina_Sketch/LondrinaSketch-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("/Fonts/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/Fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
 body {
   overflow-y: hidden;
 }
@@ -11,6 +29,9 @@ body {
   padding: 20px;
   z-index: -1;
   background-color: #2a2a3f;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 #navigation-bar ul {
   display: flex;
@@ -27,7 +48,10 @@ a {
   text-decoration: none;
   color: aliceblue;
 }
-
+#title {
+  font-family: "Londrina", sans-serif;
+  font-weight: bolder;
+}
 #titlepage {
   display: flex;
   flex-direction: column;
@@ -46,6 +70,7 @@ a {
   box-shadow: 5px 10px rgb(4, 3, 3);
   padding: 15px 28px;
   margin: 80px 10px;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
 .button:hover {
@@ -81,6 +106,7 @@ a {
   box-shadow: 5px 10px rgb(57, 52, 52);
   text-align: center;
   padding: 30px 50px;
+  font-family: "Oswald", sans-serif;
 }
 .modal h1 {
   margin: 0;
@@ -123,10 +149,7 @@ input[type="password"] {
 
 .button-form {
   font-size: 20px;
-  /* border: 2px solid black; */
-  /* border-radius: 10px;
-  box-shadow: 1px 3px rgb(4, 3, 3); */
-  /* padding: 10px; */
+  font-family: "Roboto", sans-serif;
   padding: 9px 20px;
   border-radius: 5px;
   box-shadow: 0 12px 10px rgba(0, 0, 0, 0.3);

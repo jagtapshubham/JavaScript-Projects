@@ -5,19 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <style>
+      @font-face {
+        font-family: "Poppins";
+        src: url("/Fonts/Poppins/Poppins-BlackItalic.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Londrina";
+        src: url("/Fonts/Londrina_Sketch/LondrinaSketch-Regular.ttf")
+          format("truetype");
+      }
       h1 {
         padding: 20px;
+        font-family: "Londrina", sans-serif;
       }
       ul {
         list-style: none;
         text-align: left;
-        color: rgb(0, 255, 13);
+      }
+      .names {
+        background: linear-gradient(to right, #ec4899, #4c0fdb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Poppins", sans-serif;
       }
     </style>
   </head>
   <body>
     <h1>Developers of site</h1>
-    <ul>
+    <ul class="names">
       <li>Madhura Karkar</li>
       <li>Ishita Kobal</li>
       <li>Vaishnavi Gundecha</li>

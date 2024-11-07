@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score</title>
+    <link rel="stylesheet" href="/styles/quizmenu.css" />
+    <script src="/Scripts/quizpagesscript.js" defer></script>
+  </head>
+  <body>
+    <nav id="quiz-nav">
+      <h2>Quizz Systems</h2>
+      <!-- <img src="/images/user.png" alt="user-icon" id="account-icon" /> -->
+    </nav>
+    <div class="score-details">
+      <img
+        src="/images/congratulation.png"
+        alt="congratulation image"
+        height="200px"
+      />
+      <h1 id="name"></h1>
+      <div>You Passes the <span id="test-name" class="bold"></span></div>
+      <div>Score: <span id="test-score" class="bold">80%</span></div>
+    </div>
+    <div><button id="close-score-btn">Close</button></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      const end = Date.now() + 15 * 1000;
+
+      // go Buckeyes!
+      const colors = ["#bb0000", "#ffffff"];
+
+      (function frame() {
+        confetti({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors,
+        });
+
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors,
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    </script>
+  </body>
+</html>

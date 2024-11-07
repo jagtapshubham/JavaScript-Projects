@@ -120,6 +120,11 @@ a {
 
 /* form */
 
+.error-message {
+  font-size: "32px";
+  color: red;
+}
+
 #titlesignup #titlelogin {
   display: flex;
 }

@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Page</title>
     <link rel="stylesheet" href="/styles/quizmenu.css" />
-    <script src="/script.js" defer></script>
+    <script src="/Scripts/script.js" defer></script>
   </head>
   <body>
     <nav id="quiz-nav">
-      <a href="index.html"><h2>Quizz Systems</h2></a>
-      <img src="/images/user.png" alt="user-icon" />
+      <a href="/index.html"><h2>Quizz Systems</h2></a>
+      <img src="/images/user.png" alt="user-icon" id="account-icon" />
     </nav>
     <h1>Welcome to Quizzes</h1>
     <div class="quiz-container">
@@ -46,6 +46,20 @@
             <button id="start-ds-quiz-btn">Start Quiz</button>
           </a>
         </div>
+      </div>
+    </div>
+
+    <!-- Account Info Modal  -->
+    <div id="modal-container-account" class="modal-container">
+      <div class="modal">
+        <h1>Account Info</h1>
+        <div class="account-details">
+          <div>First name: <span id="first-name"></span></div>
+          <div>Last name: <span id="last-name"></span></div>
+          <div>Email: <span id="email-info"></span></div>
+          <div>Password: <span id="pass-info"></span></div>
+        </div>
+        <div><button id="close-account-btn">Close</button></div>
       </div>
     </div>
   </body>
